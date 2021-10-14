@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="choozie_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="errorLabel" destination="htD-Ri-gc6" id="OCg-9s-T2I"/>
+                <outlet property="forgotPasswordTextView" destination="Efa-TY-qQq" id="T1c-nh-Z7e"/>
+                <outlet property="loginButton" destination="nPK-a4-SZ1" id="p8i-Ua-wGw"/>
+                <outlet property="loginLabel" destination="RWP-20-rLZ" id="n44-YM-OBq"/>
+                <outlet property="passwordTextField" destination="Poh-93-FnT" id="L3R-Fj-Ycz"/>
+                <outlet property="usernameTextField" destination="AJg-mZ-npm" id="2Wu-8l-eAm"/>
+                <outlet property="view" destination="x1O-5z-prE" id="pGr-6h-2Tn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="x1O-5z-prE">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWP-20-rLZ" customClass="HeadTitleLabel" customModule="choozie_ios" customModuleProvider="target">
+                    <rect key="frame" x="60" y="59" width="59.5" height="34.5"/>
+                    <color key="tintColor" name="textPrimary"/>
+                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJg-mZ-npm" customClass="UnderlinedTextField" customModule="choozie_ios" customModuleProvider="target">
+                    <rect key="frame" x="40" y="143.5" width="334" height="34"/>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="gmJ-r3-Ffc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Poh-93-FnT" customClass="PasswordUnderlinedTextField" customModule="choozie_ios" customModuleProvider="target">
+                    <rect key="frame" x="40" y="212.5" width="334" height="34"/>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="np2-B9-ShP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                </textField>
+                <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Забыли пароль? Восстановить" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Efa-TY-qQq">
+                    <rect key="frame" x="40" y="406" width="334" height="30"/>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="YiT-B2-tJ8"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPK-a4-SZ1" customClass="BaseButton" customModule="choozie_ios" customModuleProvider="target">
+                    <rect key="frame" x="77" y="326" width="260" height="60"/>
+                    <color key="backgroundColor" name="primaryButton"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="ODO-kS-xpb"/>
+                        <constraint firstAttribute="width" constant="260" id="eLa-6t-sb3"/>
+                    </constraints>
+                    <state key="normal" title="Войти">
+                        <color key="titleColor" name="onPrimary"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="primary"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="loginButtonClick:" destination="-1" eventType="touchUpInside" id="Rde-FS-ki5"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неправильно введены данные" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htD-Ri-gc6" customClass="BottomTextFieldErrorLabel" customModule="choozie_ios" customModuleProvider="target">
+                    <rect key="frame" x="8" y="266.5" width="398" height="19.5"/>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                    <color key="textColor" name="error"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKz-hE-ESa" customClass="BackButton" customModule="choozie_ios" customModuleProvider="target">
+                    <rect key="frame" x="8" y="54" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="dtt-9A-YRh"/>
+                        <constraint firstAttribute="height" constant="44" id="gVq-qF-2Z2"/>
+                    </constraints>
+                    <state key="normal" image="backArrow"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="qmY-oA-jpY"/>
+            <color key="backgroundColor" name="background"/>
+            <constraints>
+                <constraint firstItem="Poh-93-FnT" firstAttribute="top" secondItem="AJg-mZ-npm" secondAttribute="bottom" constant="35" id="6wo-J0-Nc5" customClass="NSLayoutHelper" customModule="choozie_ios" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
+                            <real key="value" value="35"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="Poh-93-FnT" firstAttribute="leading" secondItem="x1O-5z-prE" secondAttribute="leading" constant="40" id="9iM-G9-syi"/>
+                <constraint firstAttribute="trailing" secondItem="AJg-mZ-npm" secondAttribute="trailing" constant="40" id="BbY-Bg-IqA"/>
+                <constraint firstItem="htD-Ri-gc6" firstAttribute="leading" secondItem="qmY-oA-jpY" secondAttribute="leading" constant="8" id="DbQ-Ml-l5w"/>
+                <constraint firstItem="nPK-a4-SZ1" firstAttribute="centerX" secondItem="x1O-5z-prE" secondAttribute="centerX" id="Dqs-qb-yVV"/>
+                <constraint firstItem="htD-Ri-gc6" firstAttribute="top" secondItem="Poh-93-FnT" secondAttribute="bottom" constant="20" id="GfJ-AT-NNq" customClass="NSLayoutHelper" customModule="choozie_ios" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="NKz-hE-ESa" firstAttribute="leading" secondItem="qmY-oA-jpY" secondAttribute="leading" constant="8" id="T46-zF-NiJ"/>
+                <constraint firstItem="Efa-TY-qQq" firstAttribute="top" secondItem="nPK-a4-SZ1" secondAttribute="bottom" constant="20" id="Wo3-nj-CHv" customClass="NSLayoutHelper" customModule="choozie_ios" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="nPK-a4-SZ1" firstAttribute="top" secondItem="htD-Ri-gc6" secondAttribute="bottom" constant="40" id="X0B-5K-6EO" customClass="NSLayoutHelper" customModule="choozie_ios" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="Efa-TY-qQq" secondAttribute="trailing" constant="40" id="Xfc-s4-2BM"/>
+                <constraint firstItem="RWP-20-rLZ" firstAttribute="centerY" secondItem="NKz-hE-ESa" secondAttribute="centerY" id="e5k-WM-Kpc"/>
+                <constraint firstItem="NKz-hE-ESa" firstAttribute="top" secondItem="qmY-oA-jpY" secondAttribute="top" constant="10" id="f0E-CC-BHJ"/>
+                <constraint firstItem="Efa-TY-qQq" firstAttribute="leading" secondItem="x1O-5z-prE" secondAttribute="leading" constant="40" id="foU-G8-hmx"/>
+                <constraint firstItem="AJg-mZ-npm" firstAttribute="leading" secondItem="x1O-5z-prE" secondAttribute="leading" constant="40" id="ghs-hL-2vg"/>
+                <constraint firstItem="RWP-20-rLZ" firstAttribute="leading" secondItem="NKz-hE-ESa" secondAttribute="trailing" constant="8" id="kKD-YE-Gb7"/>
+                <constraint firstAttribute="trailing" secondItem="Poh-93-FnT" secondAttribute="trailing" constant="40" id="qqP-hg-Ek8"/>
+                <constraint firstItem="qmY-oA-jpY" firstAttribute="trailing" secondItem="htD-Ri-gc6" secondAttribute="trailing" constant="8" id="rC2-Fh-5vJ"/>
+                <constraint firstItem="AJg-mZ-npm" firstAttribute="top" secondItem="RWP-20-rLZ" secondAttribute="bottom" constant="50" id="wke-88-ZOp" customClass="NSLayoutHelper" customModule="choozie_ios" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
+                            <real key="value" value="35"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
+                            <real key="value" value="45"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+            </constraints>
+            <point key="canvasLocation" x="151" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backArrow" width="18.799999237060547" height="24.799999237060547"/>
+        <namedColor name="background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="error">
+            <color red="1" green="0.34901960784313724" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryButton">
+            <color red="0.50196078431372548" green="0.45490196078431372" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textPrimary">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
